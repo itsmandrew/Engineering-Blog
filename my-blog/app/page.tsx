@@ -13,7 +13,7 @@ const HomePage = () => {
     const postMetaData = getPostMetadata();
     const postPreviews  = postMetaData.map((slug) => (
         <div>
-            <Link href={'/posts/${slug}'}>
+            <Link href={`/posts/${slug}`}>
                 <h2>{slug}</h2>
             </Link>
         </div>
