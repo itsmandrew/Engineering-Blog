@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="mx-auto borde max-w-2xl">
+        <div className="mx-auto borde max-w-2xl px-6">
           {header}
           {children}
           {footer}
