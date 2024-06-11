@@ -1,4 +1,5 @@
 import Link from "next/link";
+import "../styles/globals.css";
 
 export const metadata = {
   title: "Andrew's Blog",
@@ -12,11 +13,11 @@ export default function RootLayout({
 }) {
   const header = (
     <header>
-      <div>
+      <div className="text-center bg-slate-800 p-8 my-6 rounded-md">
         <Link href="/">
-          <h1>Andrew's Blog</h1>
+          <h1 className="text-3xl text-white">Andrew's Blog</h1>
         </Link>
-        <p>Welcome to my engineering blog</p>
+        <p className="text-slate-300">Welcome to my engineering blog</p>
       </div>
     </header>
   );
@@ -32,9 +33,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {header}
-        {children}
-        {footer}
+        <div className="mx-auto borde max-w-2xl">
+          {header}
+          {children}
+          {footer}
+        </div>
       </body>
     </html>
   );
